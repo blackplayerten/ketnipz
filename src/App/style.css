@@ -1,0 +1,26 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: border-box;
+    background-color: #f5faff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.root {
+    margin-top: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    color: #616161;
+    text-decoration: none;
+    font-size: 5rem;
+    text-shadow: 0  4px #ffc9e3;
+    font-family: 'Baloo Bhaina', cursive;
+}
