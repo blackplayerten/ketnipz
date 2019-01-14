@@ -1,47 +1,54 @@
 .but-cute {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: border-box;
-    color: #4b4b4b;
-    background-color: #ffe8ed;
-    box-shadow: 0 0 0 2px #ffc6cc;
-    font-family: 'Righteous', sans-serif;
-    outline: none;
-    margin-left: 5rem;
-    margin-bottom: 2rem;
+}
+
+.but-cute__but {
     width: 10rem;
     padding: 10px;
     border-radius: 20px;
+    margin-bottom: 2rem;
     font-size: 25px;
     font-weight: bold;
+    text-align: center;
+    color: #4b4b4b;
+    background-color: #ffe8ed;
+    box-shadow: 0 0 0 2px #ff979e;
+    font-family: 'Sniglet', cursive;
+    outline: none;
 }
-
-.but-cute:focus {
-    width: 8.2rem;
-}
-
-.pos-but-auth {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
 
 .but-auth {
-    padding: 10px;
-    background-color: #ffe8ed;
-    box-shadow: 0 0 0 2px #ffc6cc;
-    color: #4b4b4b;
-    outline: none;
-    margin-right: 2rem;
-    border-radius: 10px;
-    font-size: 20px;
-    font-family: 'Righteous', sans-serif;
-    font-weight: bold;
-}
-
-.buttons {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    margin-right: 15rem;
+    flex-direction: row;
+    margin: 1rem;
+}
+
+
+.but-auth__but {
+    padding: 10px;
+    background-color: #ffe8ed;
+    box-shadow: 0 0 0 2px #ff979e;
+    color: #4b4b4b;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Sniglet', cursive;
+}
+
+.but-auth__but_active {
+    background-color: #c2f1ff;
+    box-shadow: 0 0 0 2px #ff979e;
+    color: #4b4b4b;
+}
+
+.but-menu-row {
+    display: flex;
+    justify-content: end;
+    flex-direction: row-reverse;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
 }

@@ -4,20 +4,24 @@ import React from 'react';
 import './style.css';
 
 import MenuComponent from './Components/Menu/Menu.js';
-import SignInComponent from "./Components/Sign in/Signin.js";
-import {Route, Switch, Link} from 'react-router-dom';
-import SignUpComponent from "./Components/Sign up/Signup";
+import SigninComponent from "./Components/Signin/Form";
+import {Route, Switch} from 'react-router-dom';
+import SignupComponent from "./Components/Signup/Form";
+import PicsListComponent from "./Components/Pics/PicsList";
 
-export default class App extends React.Component {
+class App extends React.Component {
     render() {
         return (
-            <div className="root">
+            <div className='root'>
                 <Switch>
-                    <Route exaсt path='/main' component={MenuComponent} />
-                    <Route path='/signin' component={SignInComponent} />
-                    <Route path='/signup' component={SignUpComponent} />
+                    <Route path='/signin' component={SigninComponent}/>
+                    <Route path='/signup' component={SignupComponent}/>
+                    <Route path='/pictures' component={PicsListComponent}/>
+                    <Route path='/' component={MenuComponent}/>
                 </Switch>
             </div>
         );
     }
-};
+}
+
+export default App;

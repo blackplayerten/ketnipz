@@ -1,0 +1,19 @@
+.pic {
+    width: 30%;
+    height: 30%;
+    margin: 20px;
+}
+
+.pic-about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pic-about__gray {
+    color: darkgray;
+}
+
+.pic-img {
+    width: 100px;
+    height: 100px;
+}

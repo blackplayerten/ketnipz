@@ -1,27 +1,20 @@
 .ttle {
     display: flex;
     justify-content: center;
-    color: #616161;
+    color: #8ae7ff;
     text-decoration: none;
-    font-size: 5rem;
-    text-shadow: 0  4px #ffc9e3;
-    font-family: 'Baloo Bhaina', cursive;
+    font-size: 6rem;
+    text-shadow: 0  4px #ff726f;
+    font-family: 'Fredoka One', cursive;
+    height: 8rem;
 }
 
 
 .menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     margin-left: 5rem;
     margin-right: 5rem;
     margin-top: 2rem;
-}
-
-.ket-main {
-    display: flex;
-    justify-content: center;
-    margin-left: 15rem;
-    max-width: 30rem;
-    max-height: 30rem;
-    border-radius: 50%;
 }

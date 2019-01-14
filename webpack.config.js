@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const src = path.resolve(__dirname, 'src');
 const build = path.resolve(__dirname, 'build');
@@ -45,6 +46,9 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackPlugin({
+            template: path.resolve(src, 'index.html'),
+        }),
     ],
     devServer: {
         inline: true,

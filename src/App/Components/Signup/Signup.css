@@ -1,0 +1,36 @@
+.sign-inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.sign-inputs__input {
+    border: none;
+    color: #303030;
+    margin-top: 1rem;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Righteous', sans-serif;
+    font-weight: bold;
+    height: 2rem;
+    outline: none;
+    border-radius: 10px;
+    width: 200px;
+    background-color: #fffafa;
+}
+
+.sign-inputs_errors {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ee5666;
+    font-weight: 100 !important;
+    font-family: 'Futura', sans-serif;
+}
+
+.sign-inputs__avatar {
+    font-weight: lighter ;
+    margin-top: 1rem;
+    outline: none;
+    width: 200px;
+}

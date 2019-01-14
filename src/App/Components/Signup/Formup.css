@@ -1,0 +1,23 @@
+.sign {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    flex-direction: column;
+}
+
+.sign__block {
+    border-radius: 25px;
+    box-shadow: 0 0 0 2px #ff7878;
+    width: 15rem;
+    background-color: #e8f6ff;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.sign__text {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Sniglet', cursive;
+    color: #4b4b4b;
+    font-weight: bold;
+}
