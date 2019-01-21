@@ -1,12 +1,12 @@
 .ttle {
     display: flex;
     justify-content: center;
-    color: #8ae7ff;
-    text-decoration: none;
-    font-size: 6rem;
-    text-shadow: 0  4px #ff726f;
-    font-family: 'Fredoka One', cursive;
-    height: 8rem;
+    margin-top: 4.8rem;
+}
+
+.ttle_pic {
+    width: border-box;
+    height: 10rem;
 }
 
 

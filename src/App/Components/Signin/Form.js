@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 import MenuComponent from "../Menu/Menu";
 import SignupComponent from "../Signup/Form";
 import GetCSRFToken from "../../get/csrf";
+import header from "../../img/Ketnipz_Header.png";
 
 class SigninComponent extends React.Component {
     constructor(props) {
@@ -90,8 +91,10 @@ class SigninComponent extends React.Component {
 
         return (
             <Fragment>
-                <div className="title">
-                    <Link to='/' component={MenuComponent}>Ketnipz</Link>
+                <div className="ttle">
+                    <Link to='/' component={MenuComponent}>
+                        <img className='ttle_pic' src={header}/>
+                    </Link>
                 </div>
                 <header className='sign'>
                     <div className='sign__block sign__text'>

@@ -1,14 +1,17 @@
-import React from "react";
+import React, {Fragment} from "react";
 import PicComponent from "./Pic/Pic";
 import GetCSRFToken from '../../get/csrf';
-import {Route, Switch} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
+import './PicsList.css'
+import MenuComponent from "../Menu/Menu";
+import header from "../../img/Ketnipz_Header.png";
 
 
 export default class PicsListComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isLoading: true,
+            Loader: true,
             pics: [],
         }
     }
@@ -34,7 +37,7 @@ export default class PicsListComponent extends React.Component {
                 case 200:
                     response.json().then(message => {
                         console.log(message);
-                        this.setState({ pics: message });
+                        this.setState({pics: message});
                     }).catch((e) => {
                         console.log(e);
                     });
@@ -49,29 +52,54 @@ export default class PicsListComponent extends React.Component {
                     console.log('Unknown error');
                     return;
             }
+        }).then(() => {
+            this.setState({Loader: false});
         });
-        this.setState({ isLoading: false });
     }
 
     render() {
+        let pics_block;
+        if (this.state.pics && this.state.Loader) {
+            pics_block =
+                <div className='pic-block__block_content'>
+                    <div className="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
 
-        return (
-            <div>
-                { this.state.isLoading && <h1>Loading...</h1> }
-                {/*{ this.state.pics.map((value, i) => <PicComponent props={ value } key={i} />) }*/}
-                <Switch>
+                </div>
+        } else {
+            pics_block = <Switch>
+                <div className='pic-block__block_content'>
                     <Route
                         exact
                         path="/pictures"
-                        render={ () =>
-                            this.state.pics.map((value, i) => <PicComponent {...value} key={i} />) }
+                        render={() => this.state.pics.map((value, i) =>
+                            <PicComponent {...value} key={i}/>)}
                     />
                     <Route
                         path="/pictures/:id"
-                        component={ PicComponent }
+                        component={PicComponent}
                     />
-                </Switch>
-            </div>
+                </div>
+            </Switch>
+        }
+
+        return (
+            <Fragment>
+                <div className="ttle">
+                    <Link to='/' component={MenuComponent}>
+                        <img className='ttle_pic' src={header}/>
+                    </Link>
+                </div>
+                <div className='pic-block'>
+                    <div className='pic-block__block'>
+                        {pics_block}
+                    </div>
+                </div>
+            </Fragment>
         )
     }
 };

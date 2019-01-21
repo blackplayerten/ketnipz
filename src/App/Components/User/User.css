@@ -1,50 +1,37 @@
-.pic-card {
+.user-card {
     width: 15rem;
-    height: border-box;
+    height: 4rem;
     border: 2px solid #ff979e;
-    background-color: #e8f6ff;
+    background-color: #fcf6ff;
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
 }
 
-.pic-card__name {
-    justify-content: center;
-    font-weight: bold;
-    font-size: 22px;
-    font-family: 'Sniglet', cursive;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    color: #4b4b4b;
-}
-
-.pic-card__img {
+.user-card__avatar {
     justify-content: center;
     margin: 10px;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 
-.pic-card__about {
+.user-card__about {
     display: flex;
     flex-direction: column;
     align-content: center;
     color: #4b4b4b;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem;
     justify-content: center;
 }
 
-.about-item {
+.user-item {
     display: flex;
     justify-content: center;
 }
 
-.about-item_header {
+.user-item_header {
     font-size: 16px;
     font-weight: bolder;
     margin-bottom: 0.5rem;
@@ -52,7 +39,7 @@
     text-decoration: underline;
 }
 
-.about-item__item {
+.user-item__item {
     font-size: 16px;
     font-weight: lighter;
     margin-left: 5px;

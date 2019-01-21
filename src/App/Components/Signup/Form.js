@@ -7,6 +7,7 @@ import './Signup.css';
 import {Link} from "react-router-dom";
 import MenuComponent from "../Menu/Menu";
 import SigninComponent from "../Signin/Form";
+import header from "../../img/Ketnipz_Header.png";
 
 class SignupComponent extends React.Component {
     constructor(props) {
@@ -69,8 +70,10 @@ class SignupComponent extends React.Component {
 
         return (
             <Fragment>
-                <div className="title">
-                    <Link to='/' component={MenuComponent}>Ketnipz</Link>
+                <div className="ttle">
+                    <Link to='/' component={MenuComponent}>
+                        <img className='ttle_pic' src={header}/>
+                    </Link>
                 </div>
                 <header className='sign'>
                     <div className='sign__block sign__text'>

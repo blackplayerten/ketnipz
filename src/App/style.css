@@ -22,10 +22,17 @@ h1 {
 .title {
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
-    color: #8ae7ff;
-    text-decoration: none;
-    font-size: 6rem;
-    text-shadow: 0  4px #ff726f;
-    font-family: 'Fredoka One', cursive;
+}
+
+.title_pic {
+    width: border-box;
+    height: 10rem;
+}
+
+
+.ket {
+    display: flex;
+    justify-content: center;
+    max-width: 20rem;
+    max-height: 20rem;
 }

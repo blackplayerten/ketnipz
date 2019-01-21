@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: border-box;
+    height: 3rem;
+    margin: 1rem;
 }
 
 .but-cute__but {
@@ -14,7 +15,7 @@
     font-weight: bold;
     text-align: center;
     color: #4b4b4b;
-    background-color: #ffe8ed;
+    background-color: #fcf6ff;
     box-shadow: 0 0 0 2px #ff979e;
     font-family: 'Sniglet', cursive;
     outline: none;
@@ -24,13 +25,12 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin: 1rem;
 }
 
 
 .but-auth__but {
     padding: 10px;
-    background-color: #ffe8ed;
+    background-color: #fcf6ff;
     box-shadow: 0 0 0 2px #ff979e;
     color: #4b4b4b;
     outline: none;
@@ -51,4 +51,11 @@
     flex-direction: row-reverse;
     margin-right: 2rem;
     margin-bottom: 1rem;
+}
+
+.but-sign {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
