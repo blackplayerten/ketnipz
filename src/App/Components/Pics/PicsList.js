@@ -5,6 +5,7 @@ import {Link, Route, Switch} from "react-router-dom";
 import './PicsList.css'
 import MenuComponent from "../Menu/Menu";
 import header from "../../img/Ketnipz_Header.png";
+import PicLargeComponent from "./Pic/PicLarge";
 
 
 export default class PicsListComponent extends React.Component {
@@ -60,43 +61,37 @@ export default class PicsListComponent extends React.Component {
     render() {
         let pics_block;
         if (this.state.pics && this.state.Loader) {
-            pics_block =
-                <div className='pic-block__block_content'>
-                    <div className="lds-ellipsis">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-
-                </div>
+            pics_block = <div className="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         } else {
             pics_block = <Switch>
-                <div className='pic-block__block_content'>
-                    <Route
-                        exact
-                        path="/pictures"
-                        render={() => this.state.pics.map((value, i) =>
-                            <PicComponent {...value} key={i}/>)}
-                    />
-                    <Route
-                        path="/pictures/:id"
-                        component={PicComponent}
-                    />
-                </div>
+                <Route
+                    exact
+                    path="/pictures"
+                    render={() => this.state.pics.map((value, i) =>
+                        <PicComponent {...value} id={i} key={i}/>)}
+                />
+                <Route
+                    path="/pictures/:id"
+                    render={() => <PicLargeComponent/>}
+                />
             </Switch>
         }
 
         return (
             <Fragment>
-                <div className="ttle">
-                    <Link to='/' component={MenuComponent}>
-                        <img className='ttle_pic' src={header}/>
-                    </Link>
-                </div>
-                <div className='pic-block'>
-                    <div className='pic-block__block'>
-                        {pics_block}
+                <Link to='/' component={MenuComponent} className="title">
+                    <img className='title_pic' src={header}/>
+                </Link>
+                <div className='pic'>
+                    <div className='pic_block'>
+                        <div className='pic_content'>
+                            {pics_block}
+                        </div>
                     </div>
                 </div>
             </Fragment>

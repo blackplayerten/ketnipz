@@ -1,11 +1,10 @@
-.pic-block {
+.pic {
     display: flex;
     justify-content: center;
 }
 
-.pic-block__block {
+.pic_block {
     display: flex;
-    align-items: center;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
@@ -15,7 +14,7 @@
     width: 70rem;
 }
 
-.pic-block__block_content {
+.pic_content {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;

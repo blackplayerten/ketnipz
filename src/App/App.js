@@ -11,15 +11,13 @@ import AboutComponent from "./Components/About/About";
 class App extends React.Component {
     render() {
         return (
-            <div className='root'>
-                <Switch>
-                    <Route path='/signin' component={SigninComponent}/>
-                    <Route path='/signup' component={SignupComponent}/>
-                    <Route path='/pictures' component={PicsListComponent}/>
-                    <Route path='/about' component={AboutComponent}/>
-                    <Route path='/' component={MenuComponent}/>
-                </Switch>
-            </div>
+            <Switch>
+                <Route path='/signin' component={SigninComponent}/>
+                <Route path='/signup' component={SignupComponent}/>
+                <Route path='/pictures' component={PicsListComponent}/>
+                <Route path='/about' component={AboutComponent}/>
+                <Route path='/' component={MenuComponent}/>
+            </Switch>
         );
     }
 }

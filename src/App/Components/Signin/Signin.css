@@ -2,28 +2,39 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 15px;
 }
 
 .sign-inputs__input {
     border: none;
     color: #303030;
     margin-top: 1rem;
-    padding: 5px;
-    font-size: 15px;
-    font-family: 'Righteous', sans-serif;
+    padding: .3rem;
+    font-size: 1rem;
     font-weight: bold;
     height: 2rem;
     outline: none;
-    border-radius: 10px;
-    width: 200px;
+    border-radius: .7rem;
+    width: 12rem;
     background-color: #fffafa;
 }
 
+.sign-inputs__buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 1.5rem;
+}
+
 .sign-inputs_errors {
-    margin-top: 5px;
-    font-size: 14px;
+    margin-top: .3rem;
+    font-size: .9rem;
     color: #ee5666;
     font-weight: 100 !important;
-    font-family: 'Futura', sans-serif;
+}
+
+.sign-inputs__avatar {
+    font-weight: bold;
+    margin-top: 1.5rem;
+    outline: none;
+    width: 13rem;
 }

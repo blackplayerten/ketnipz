@@ -2,8 +2,8 @@
 
 import React, {Fragment} from 'react';
 import {Errors} from "./Errors";
-import './Formup.css';
-import './Signup.css';
+import '/Users/sash/projects/ketnipz/src/App/Components/Signin/Formin.css';
+import '/Users/sash/projects/ketnipz/src/App/Components/Signin/Signin.css';
 import {Link} from "react-router-dom";
 import MenuComponent from "../Menu/Menu";
 import SigninComponent from "../Signin/Form";
@@ -54,8 +54,10 @@ class SignupComponent extends React.Component {
     }
 
     validateForm() {
-        this.setState({formValid: this.state.loginValid && this.state.emailValid &&
-                this.state.passwordValid});
+        this.setState({
+            formValid: this.state.loginValid && this.state.emailValid &&
+                this.state.passwordValid
+        });
     }
 
     render() {
@@ -70,11 +72,9 @@ class SignupComponent extends React.Component {
 
         return (
             <Fragment>
-                <div className="ttle">
-                    <Link to='/' component={MenuComponent}>
-                        <img className='ttle_pic' src={header}/>
-                    </Link>
-                </div>
+                <Link to='/' component={MenuComponent} className="title">
+                    <img className='title_pic' src={header}/>
+                </Link>
                 <header className='sign'>
                     <div className='sign__block sign__text'>
                         <h1> Sign up </h1>
@@ -91,16 +91,12 @@ class SignupComponent extends React.Component {
                             <input type='password' name='password' className='sign-inputs__input' placeholder='password'
                                    value={this.state.password} onChange={onHandle}
                             />
-                            <input type="file" name="avatar" className='sign-inputs__avatar' placeholder="" />
-                            <div className='but-auth but-cute'>
-                                <button type='submit' className='sign__text but-auth__but but-auth__but_active'
+                            <input type="file" name="avatar" className='sign-inputs__avatar' placeholder=""/>
+                            <div className='sign-inputs__buttons'>
+                                <button type='submit' className='sign__text button-submit'
                                         disabled={!this.state.formValid}>Sign up
                                 </button>
-                                <div className='but-auth'>
-                                    <Link to='/signin' component={SigninComponent}>
-                                        <a className='sign__text but-auth__but'> Sign in</a>
-                                    </Link>
-                                </div>
+                                <Link to='/signin' component={SigninComponent} className='sign__text button-link'>Sign in</Link>
                             </div>
                         </form>
                     </div>

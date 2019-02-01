@@ -1,61 +1,46 @@
 .but-cute {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 3rem;
     margin: 1rem;
+    text-align: center;
+    height: 3rem;
 }
 
 .but-cute__but {
+    display: block;
     width: 10rem;
-    padding: 10px;
-    border-radius: 20px;
-    margin-bottom: 2rem;
-    font-size: 25px;
-    font-weight: bold;
+    padding: .3rem;
+    border-radius: 1rem;
     text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
     color: #4b4b4b;
     background-color: #fcf6ff;
-    box-shadow: 0 0 0 2px #ff979e;
-    font-family: 'Sniglet', cursive;
+    border: 2px solid #ff979e;
     outline: none;
 }
 
-.but-auth {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-
-.but-auth__but {
-    padding: 10px;
+.button-submit {
+    width: 6rem;
+    padding: .4rem;
+    border-radius: .6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4b4b4b;
     background-color: #fcf6ff;
-    box-shadow: 0 0 0 2px #ff979e;
-    color: #4b4b4b;
+    border: 2px solid #ff979e;
     outline: none;
-    border-radius: 10px;
-    font-size: 20px;
-    font-family: 'Sniglet', cursive;
+    margin: .5rem;
 }
 
-.but-auth__but_active {
-    background-color: #c2f1ff;
-    box-shadow: 0 0 0 2px #ff979e;
+.button-link {
+    width: 4.96rem;
+    padding: .4rem;
+    border-radius: .6rem;
+    font-size: 1rem;
+    font-weight: bold;
     color: #4b4b4b;
-}
-
-.but-menu-row {
-    display: flex;
-    justify-content: end;
-    flex-direction: row-reverse;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
-}
-
-.but-sign {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    background-color: #e8f6ff;
+    border: 2px solid #ff979e;
+    outline: none;
+    margin: .5rem;
 }

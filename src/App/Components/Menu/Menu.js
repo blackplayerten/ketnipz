@@ -9,8 +9,7 @@ import '/Users/sash/projects/ketnipz/src/App/Components/Button/Button.css'
 import PicsListComponent from "../Pics/PicsList";
 import AboutComponent from "../About/About";
 import GetCSRFToken from "../../get/csrf";
-import UserComponent from "../User/UserComponent";
-import PicComponent from "../Pics/Pic/Pic";
+import User from "../User/User";
 
 
 class MenuComponent extends React.Component {
@@ -68,49 +67,31 @@ class MenuComponent extends React.Component {
         let user_block;
         if (this.state.not_authenticated) {
             user_block =
-                <div className='but-menu-row'>
-                <div className='but-sign'>
-                <Link to='/signin' component={SigninComponent}>
-                    <a className='but-auth__but'>SignIn</a>
-                </Link>
-            </div>
-                </div>
+                <Link to='/signin' component={SigninComponent} className='sign-user-block_sign'>SignIn</Link>
         } else {
             user_block = <Switch>
-                <div className='but-menu-row'>
                 <Route
                     exact
                     path="/"
-                    component={UserComponent}
+                    component={User}
                 />
-                    {/*<Route*/}
-                        {/*path="/:id"*/}
-                        {/*component={UserComponent}*/}
-                    {/*/>*/}
-                </div>
             </Switch>
         }
 
         return (
             <Fragment>
-                <div className='but-menu-row'>
+                <div className='sign-user-block'>
                     {user_block}
                 </div>
-                <div className="title">
-                    <Link to='/' component={MenuComponent}>
+                    <Link to='/' component={MenuComponent} className="title">
                         <img className='title_pic' src={header}/>
                     </Link>
-                </div>
                 <div className='menu'>
                     <div className="but-cute">
-                        <Link to='/about' component={AboutComponent}>
-                            <a className='but-cute__but'>About</a>
-                        </Link>
+                        <Link to='/about' component={AboutComponent} className='but-cute__but'>About</Link>
                     </div>
                     <div className="but-cute">
-                        <Link to='/pictures' component={PicsListComponent}>
-                            <a className='but-cute__but'>Pictures</a>
-                        </Link>
+                        <Link to='/pictures' component={PicsListComponent} className='but-cute__but'>Pictures</Link>
                     </div>
                     <img className='ket' src={image}/>
                 </div>

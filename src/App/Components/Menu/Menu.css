@@ -1,20 +1,40 @@
-.ttle {
+.sign-user-block {
     display: flex;
-    justify-content: center;
-    margin-top: 4.8rem;
+    flex-direction: row-reverse;
+    margin: 1rem;
 }
 
-.ttle_pic {
+.sign-user-block_sign {
+    padding: 10px;
+    background-color: #fcf6ff;
+    box-shadow: 0 0 0 2px #ff979e;
+    color: #4b4b4b;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Sniglet', cursive;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.title_pic {
     width: border-box;
     height: 10rem;
 }
 
+.ket {
+    display: flex;
+    justify-content: center;
+    max-width: 20rem;
+    max-height: 20rem;
+}
 
 .menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 5rem;
-    margin-right: 5rem;
     margin-top: 2rem;
 }

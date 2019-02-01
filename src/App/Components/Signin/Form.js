@@ -4,6 +4,7 @@ import React, {Fragment} from 'react';
 import {Errors} from "./Errors";
 import './Formin.css';
 import './Signin.css';
+import '/Users/sash/projects/ketnipz/src/App/Components/Button/Button.css';
 import {Link} from "react-router-dom";
 import MenuComponent from "../Menu/Menu";
 import SignupComponent from "../Signup/Form";
@@ -29,7 +30,6 @@ class SigninComponent extends React.Component {
         let passwordValid = this.state.passwordValid;
         switch (field) {
             case 'username':
-                // emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
                 usernameValid = true;
                 fieldErrors.username = usernameValid ? '' : ' is invalid';
                 break;
@@ -91,11 +91,9 @@ class SigninComponent extends React.Component {
 
         return (
             <Fragment>
-                <div className="ttle">
-                    <Link to='/' component={MenuComponent}>
-                        <img className='ttle_pic' src={header}/>
-                    </Link>
-                </div>
+                <Link to='/' component={MenuComponent} className="title">
+                    <img className='title_pic' src={header}/>
+                </Link>
                 <header className='sign'>
                     <div className='sign__block sign__text'>
                         <h1> Sign in </h1>
@@ -103,26 +101,17 @@ class SigninComponent extends React.Component {
                             <div className='sign-inputs_errors'>
                                 <Errors errors={this.state.errors}/>
                             </div>
-                            {/*<input type='email' name='email' className='sign-inputs__input' placeholder='e-mail'*/}
-                            <input type='text' name='username' className='sign-inputs__input' placeholder='e-mail'
+                            <input type='text' name='username' className='sign-inputs__input' placeholder='login'
                                    value={this.state.username} onChange={onHandle}
                             />
                             <input type='password' name='password' className='sign-inputs__input' placeholder='password'
                                    value={this.state.password} onChange={onHandle}
                             />
-
-
-
-                            <div className='but-auth but-cute'>
-                                <button type='submit' className='sign__text but-auth__but but-auth__but_active'
+                            <div className='sign-inputs__buttons'>
+                                <button type='submit' className='sign__text button-submit'
                                         disabled={!this.state.formValid}>Sign in
                                 </button>
-
-                                <div className='but-auth'>
-                                    <Link to='/signup' component={SignupComponent}>
-                                        <a className='sign__text but-auth__but'> Sign up</a>
-                                    </Link>
-                                </div>
+                                <Link to='/signup' component={SignupComponent} className='sign__text button-link'>Sign up</Link>
                             </div>
                         </form>
                     </div>
